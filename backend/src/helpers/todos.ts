@@ -44,7 +44,6 @@ export async function deleteTodo(todoId: string, token: string) {
 
 export async function updateTodoAttachment(id: string) {
   const [userId, todoId] = getIdsFromKey(id);
-  console.log('ID:', id);
-  console.log('todoId', todoId, 'userid', userId);
+
   return todosAccess.updateAttachment(todoId, decodeURI(userId), getAttachmentUrl(userId, todoId));
 }

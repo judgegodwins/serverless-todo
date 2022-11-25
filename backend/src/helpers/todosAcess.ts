@@ -77,8 +77,6 @@ export class TodosAccess {
     userId: string,
     url: string,
   ) {
-    console.log('URL', url);
-    console.log(userId, todoId);
     const params = {
       TableName: this.todosTable,
       Key: {
