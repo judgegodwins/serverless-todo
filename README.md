@@ -1,5 +1,7 @@
 # Serverless TODO
 
+## [API Gateway URL](https://fzs4qtvok2.execute-api.us-east-1.amazonaws.com/dev)
+
 To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
 
 # Functionality of the application
