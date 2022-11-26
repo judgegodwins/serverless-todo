@@ -7,7 +7,7 @@ import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
 import * as createError from 'http-errors'
 import { parseUserId } from '../auth/utils'
-import { getAttachmentUrl, getIdsFromKey } from './attachmentUtils'
+import { getAttachmentUrl, getIdsFromKey, getUploadUrl } from './attachmentUtils'
 
 // TODO: Implement businessLogic
 
@@ -46,4 +46,11 @@ export async function updateTodoAttachment(id: string) {
   const [userId, todoId] = getIdsFromKey(id);
 
   return todosAccess.updateAttachment(todoId, decodeURI(userId), getAttachmentUrl(userId, todoId));
+}
+
+export function generateUrl(todoId: string, token: string) {
+  const userId = parseUserId(token);
+  const uploadUrl = getUploadUrl(userId, todoId);
+
+  return uploadUrl;
 }
