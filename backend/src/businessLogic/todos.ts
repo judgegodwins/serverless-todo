@@ -1,4 +1,4 @@
-import { TodosAccess } from './todosAcess'
+import { TodosAccess } from '../dataLayer/todosAcess'
 // import { AttachmentUtils } from './attachmentUtils';
 import { TodoItem } from '../models/TodoItem'
 import { CreateTodoRequest } from '../requests/CreateTodoRequest'
@@ -7,7 +7,7 @@ import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
 import * as createError from 'http-errors'
 import { parseUserId } from '../auth/utils'
-import { getAttachmentUrl, getIdsFromKey, getUploadUrl } from './attachmentUtils'
+import { getAttachmentUrl, getIdsFromKey, getUploadUrl } from '../helpers/attachmentUtils'
 
 // TODO: Implement businessLogic
 
